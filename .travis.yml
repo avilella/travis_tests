@@ -1,0 +1,3 @@
+language: perl
+# Change this to your needs
+script: ./cpanm -L ./libperl JSON::XS JSON Set::IntervalTree && export PERL5LIB=`pwd`/libperl/lib/perl5 && perl ./test.pl
