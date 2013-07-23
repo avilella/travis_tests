@@ -1,11 +1,11 @@
 language: perl
 perl:
   - "5.16"
-  - "5.14"
-  - "5.12"
-  - "5.10"
+#  - "5.14"
+#  - "5.12"
+#  - "5.10"
 # Change this to your needs
-before_install:
+install:
   # bootstrap modules needed to manipulate dist
   - "cpanm JSON::XS"
   - "cpanm JSON"
