@@ -1,3 +1,13 @@
 language: perl
+perl:
+  - "5.16"
+  - "5.14"
+  - "5.12"
+  - "5.10"
 # Change this to your needs
-script: ./cpanm -L ./libperl JSON::XS JSON Set::IntervalTree && export PERL5LIB=`pwd`/libperl/lib/perl5 && perl ./test.pl
+before_install:
+  # bootstrap modules needed to manipulate dist
+  - "cpanm JSON::XS"
+  - "cpanm JSON"
+  - "cpanm Set::IntervalTree"
+script: perl ./test.pl
